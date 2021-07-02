@@ -49,6 +49,10 @@ namespace Alura.ListaLeitura.Modelos
 
         public static LivroUpload ToModel(this Livro livro)
         {
+            if(livro == null)
+            {
+                return null;
+            }
             return new LivroUpload
             {
                 Id = livro.Id,
